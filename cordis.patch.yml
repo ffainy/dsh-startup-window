@@ -1,0 +1,6 @@
+# dsh-startup-window bundle patch: inserts the plugin row into the profile roster.
+# The host half (exports ".") registers one /api route + resizes the desktop
+# window at boot; the browser half (exports "./client") adds the settings page.
+- insert:
+    - id: dsh-startup-window
+      name: 'dsh-startup-window'
