@@ -1,6 +1,6 @@
 {
   "name": "dsh-startup-window",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Set the DSH desktop startup window size from Settings. No app.asar edits.",
   "keywords": [
     "dsh",
@@ -39,10 +39,7 @@
       "patch": "./cordis.patch.yml"
     },
     "client": {
-      "platform": "web",
-      "inject": [
-        "@deepseek-ai/dsh-client-locale"
-      ]
+      "platform": "web"
     }
   },
   "peerDependencies": {
