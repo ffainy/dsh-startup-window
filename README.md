@@ -5,6 +5,12 @@
 DSH 桌面版每次启动都是 1280×820——窗口尺寸写死在壳的 `createWindow()` 里，也不保存 bounds。
 这个插件不改 app.asar，让你在设置里填宽高，启动时自动应用并居中。
 
+> **状态：参考实现，建议改用上游。**
+> 同样的痛已经有更完整的做法：在渲染进程里于首帧前 `resizeTo`，不需要 PowerShell、跨平台、且能看到
+> "上次的尺寸"和位置。实际使用请见 [jue5hen/dsh-window-size](https://github.com/jue5hen/dsh-window-size)
+> （npm `dsh-window-size`，支持固定/记忆两模式、比例预设、位置记忆）。
+> 这个仓库保留下来作为"Host 侧 PowerShell 改窗口"路线的参考，不再主动维护。
+
 ## 用法
 
 设置 → **窗口大小** / **Window size**，填宽度和高度（DIP / CSS 像素）。
